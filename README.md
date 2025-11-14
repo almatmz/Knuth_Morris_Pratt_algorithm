@@ -78,7 +78,7 @@ Note: The CSV and JSON include `elapsedMillis`. The JSON samples below omit `mat
 
 ## Datasets
 
-All experiments use pattern `goal` (lowercase, case-sensitive).
+All experiments use pattern `goal`.
 
 - football_small: a short, single-occurrence sentence
 - football_medium: a paragraph with multiple mentions
@@ -172,21 +172,6 @@ Conclusion:
 
 ---
 
-## Reproducibility
-
-1. Place dataset JSON files in `input/` using this schema:
-   ```json
-   { "dataset": "name", "pattern": "goal", "text": "..." }
-   ```
-2. Run:
-   ```bash
-   mvn -q exec:java -Dexec.mainClass="almat.Main"
-   ```
-3. Inspect:
-    - Per-dataset JSON: `output/output_<dataset>.json`
-    - Consolidated CSV: `output/summary.csv`
-
----
 
 ## Testing
 
